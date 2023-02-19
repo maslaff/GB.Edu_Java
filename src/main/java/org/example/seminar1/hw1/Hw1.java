@@ -10,5 +10,6 @@ public class Hw1 {
             rev[i] = splitInput[splitInput.length - i -1].strip();
         }
         System.out.println(String.join(" ", rev));
+        scanner.close();
     }
 }

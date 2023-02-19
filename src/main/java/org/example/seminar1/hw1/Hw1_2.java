@@ -13,7 +13,10 @@ public class Hw1_2 {
             int new_num = scanner.nextInt();
             if(new_num > 0) num = new_num;
             else if(new_num < 0) acc += num;
-            else return acc;
+            else {
+                scanner.close();
+                return acc;
+            }
         }
     }
 }
