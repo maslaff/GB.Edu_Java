@@ -161,3 +161,6 @@ buildNumber.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,java,maven
 /workspace.xml
+**/vers/**
+
+src/main/java/org/example/**/vers/
