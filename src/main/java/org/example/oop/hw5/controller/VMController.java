@@ -8,10 +8,8 @@ package org.example.oop.hw5.controller;
 //import org.example.oop.hw5.view.*;
 
 
-import org.example.oop.hw5.model.HotDrink;
-import org.example.oop.hw5.model.HotDrinksVM;
-import org.example.oop.hw5.model.MultiVM;
-import org.example.oop.hw5.model.Snacks;
+import org.example.oop.hw5.model.*;
+import org.example.oop.hw5.view.VMView;
 
 import java.util.List;
 
@@ -20,6 +18,7 @@ public class VMController {
     private HotDrinksVM hotDrinkVM2 = new HotDrinksVM();
     private MultiVM multiVM = new MultiVM();
     public void LoadMachine() {
+        VMView view = new VMView();
 
         //        VendingMachine vendingMachine = new VendingMachine();
         HotDrink tea = new HotDrink("Tea", 50, 200, 92);
@@ -34,6 +33,10 @@ public class VMController {
         hotDrinkVM2.insertProduct(List.of(tea, teaBig, coffee, soup));
         multiVM.insertProduct(List.of(coffee, teaBig, crackers));
 
+        view.printInfo(hotDrinkVM1.getProduct("Tea", 200, 92).toString());
+        view.printInfo(hotDrinkVM2.getProduct("Soup", 200, 85).toString());
+        view.printInfo(multiVM.getProduct("Coffee").toString());
+        view.printInfo(multiVM.getProduct("3 crusts").toString());
 
     }
 
