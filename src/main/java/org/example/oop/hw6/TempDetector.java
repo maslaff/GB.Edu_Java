@@ -12,8 +12,9 @@ public class TempDetector extends Detector{
     }
 
     public void determineTemperature(){
-        this.temperature = new Random().nextDouble(0, 300);
-        this.setAlarm(this.temperature > this.treshold);
+        double t = new Random().nextDouble(0, 100);
+        this.temperature = Math.round(t*100.0)/100.0;
+                this.setAlarm(this.temperature > this.treshold);
     }
 
     public double getTemperature() {

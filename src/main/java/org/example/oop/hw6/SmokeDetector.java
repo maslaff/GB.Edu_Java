@@ -12,7 +12,7 @@ public class SmokeDetector extends Detector {
     }
 
     public void determineGasLevel(){
-        this.gasLevel = new Random().nextInt(0, 50);
+        this.gasLevel = new Random().nextInt(0, 35);
         this.setAlarm(this.gasLevel > this.treshold);
     }
 
